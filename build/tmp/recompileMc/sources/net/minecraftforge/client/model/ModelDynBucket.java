@@ -119,7 +119,7 @@ public final class ModelDynBucket implements IModel
 
         ImmutableMap<TransformType, TRSRTransformation> transformMap = PerspectiveMapWrapper.getTransforms(state);
 
-        // if the fluid is a gas wi manipulate the initial state to be rotated 180° to turn it upside down
+        // if the fluid is a gas wi manipulate the initial state to be rotated 180? to turn it upside down
         if (flipGas && fluid != null && fluid.isGaseous())
         {
             state = new ModelStateComposition(state, TRSRTransformation.blockCenterToCorner(new TRSRTransformation(null, new Quat4f(0, 0, 1, 0), null, null)));
