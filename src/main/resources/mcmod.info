@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "blocksfm",
+  "name": "BLOCKS-FM",
+  "description": "This mod adds radios and radio stations to Minecraft",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["Krassus7608, Steve182"],
+  "credits": "",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
