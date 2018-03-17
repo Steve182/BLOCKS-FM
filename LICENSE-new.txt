@@ -1,3 +1,5 @@
+test
+
 Minecraft Forge is licensed under the terms of the LGPL 2.1 found
 here http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt and copied
 below.
@@ -17,7 +19,7 @@ patch content to the Forge project.
 
 A note on infectivity:
 The LGPL is chosen specifically so that projects may depend on Forge
-features without being infected with its license. That is the 
+features without being infected with its license. That is the
 purpose of the LGPL. Mods and others using this code via ordinary
 Java mechanics for referencing libraries are specifically not bound
 by Forge's license for the Mod code.
