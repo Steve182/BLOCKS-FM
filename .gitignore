@@ -1,23 +1,3 @@
 /.gradle/
 /build/
-/.settings
-/eclipse/
-/gradle/
-/.classpath
-/forge-1.12.2-14.23.2.2618-changelog.txt
-/gradlew.bat
-/gradlew
-/LICENSE-new.txt
-/MinecraftForge-Credits.txt
-/Paulscode IBXM Library License.txt
-/Paulscode SoundSystem CodecIBXM License.txt
-/usercache.json
-/usernamecache.json
-/logs/
-/saves/
-/options.txt
-/README.txt
-/README.md
-/crash-reports
-/CREDITS-fml.txt
-/*.log
+*.log
