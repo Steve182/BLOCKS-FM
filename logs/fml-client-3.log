@@ -91,9 +91,9 @@
 [00:37:28] [main/DEBUG] [FML/]:     D:\Programme\Microsoft VS Code\bin
 [00:37:28] [main/DEBUG] [FML/]:     C:\Users\Stefan\AppData\Roaming\npm
 [00:37:28] [main/DEBUG] [FML/]:     C:\Programme\oracle\instantclient
-[00:37:28] [main/DEBUG] [FML/]:     
+[00:37:28] [main/DEBUG] [FML/]:
 [00:37:28] [main/DEBUG] [FML/]:     C:\WINDOWS\system32
-[00:37:28] [main/DEBUG] [FML/]:     
+[00:37:28] [main/DEBUG] [FML/]:
 [00:37:28] [main/DEBUG] [FML/]:     .
 [00:37:28] [main/DEBUG] [FML/]:     C:/Users/Stefan/.gradle/caches/minecraft/net/minecraft/natives/1.12.2
 [00:37:28] [main/INFO] [FML/]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
@@ -152,10 +152,10 @@ Details:
 	Java Version: 1.8.0_161, Oracle Corporation
 	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
 	Memory: 845605560 bytes (806 MB) / 979369984 bytes (934 MB) up to 7635730432 bytes (7282 MB)
-	JVM Flags: 0 total; 
+	JVM Flags: 0 total;
 	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
-	FML: 
-	Loaded coremods (and transformers): 
+	FML:
+	Loaded coremods (and transformers):
 	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.6.0 NVIDIA 390.65' Renderer: 'GeForce GTX 970/PCIe/SSE2'
 [00:37:37] [main/INFO] [FML/]: MinecraftForge v14.23.2.2618 Initialized
 [00:37:37] [main/INFO] [FML/]: Starts to replace vanilla recipe ingredients with ore ingredients.
@@ -483,7 +483,7 @@ Details:
 [00:37:50] [main/DEBUG] [FML/]: Bar Finished: Texture creation took 0.038s
 [00:37:50] [main/DEBUG] [FML/]: Bar Finished: Texture mipmap and upload took 0.028s
 [00:37:51] [main/DEBUG] [FML/]: Bar Finished: ModelLoader: baking took 0.845s
-[00:37:51] [main/ERROR] [FML/]: Exception loading model for variant blocksfm:radiostation#inventory for item "blocksfm:radiostation", normal location exception: 
+[00:37:51] [main/ERROR] [FML/]: Exception loading model for variant blocksfm:radiostation#inventory for item "blocksfm:radiostation", normal location exception:
 net.minecraftforge.client.model.ModelLoaderRegistry$LoaderException: Exception loading model blocksfm:item/radiostation with loader VanillaLoader.INSTANCE, skipping
 	at net.minecraftforge.client.model.ModelLoaderRegistry.getModel(ModelLoaderRegistry.java:153) ~[ModelLoaderRegistry.class:?]
 	at net.minecraftforge.client.model.ModelLoader.loadItemModels(ModelLoader.java:314) ~[ModelLoader.class:?]
@@ -513,7 +513,7 @@ Caused by: java.io.FileNotFoundException: blocksfm:models/item/radiostation.json
 	at net.minecraftforge.client.model.ModelLoader$VanillaLoader.loadModel(ModelLoader.java:880) ~[ModelLoader$VanillaLoader.class:?]
 	at net.minecraftforge.client.model.ModelLoaderRegistry.getModel(ModelLoaderRegistry.java:149) ~[ModelLoaderRegistry.class:?]
 	... 20 more
-[00:37:51] [main/ERROR] [FML/]: Exception loading model for variant blocksfm:radiostation#inventory for item "blocksfm:radiostation", blockstate location exception: 
+[00:37:51] [main/ERROR] [FML/]: Exception loading model for variant blocksfm:radiostation#inventory for item "blocksfm:radiostation", blockstate location exception:
 net.minecraftforge.client.model.ModelLoaderRegistry$LoaderException: Exception loading model blocksfm:radiostation#inventory with loader VariantLoader.INSTANCE, skipping
 	at net.minecraftforge.client.model.ModelLoaderRegistry.getModel(ModelLoaderRegistry.java:153) ~[ModelLoaderRegistry.class:?]
 	at net.minecraftforge.client.model.ModelLoader.loadItemModels(ModelLoader.java:322) ~[ModelLoader.class:?]
@@ -541,7 +541,7 @@ Caused by: net.minecraft.client.renderer.block.model.ModelBlockDefinition$Missin
 	at net.minecraftforge.client.model.ModelLoader$VariantLoader.loadModel(ModelLoader.java:1189) ~[ModelLoader$VariantLoader.class:?]
 	at net.minecraftforge.client.model.ModelLoaderRegistry.getModel(ModelLoaderRegistry.java:149) ~[ModelLoaderRegistry.class:?]
 	... 20 more
-[00:37:51] [main/ERROR] [FML/]: Exception loading blockstate for the variant blocksfm:radiostation#inventory: 
+[00:37:51] [main/ERROR] [FML/]: Exception loading blockstate for the variant blocksfm:radiostation#inventory:
 java.lang.Exception: Could not load model definition for variant blocksfm:radiostation
 	at net.minecraftforge.client.model.ModelLoader.getModelBlockDefinition(ModelLoader.java:281) ~[ModelLoader.class:?]
 	at net.minecraft.client.renderer.block.model.ModelBakery.loadBlock(ModelBakery.java:121) ~[ModelBakery.class:?]
@@ -633,7 +633,7 @@ Caused by: net.minecraft.client.renderer.block.model.ModelBlockDefinition$Missin
 	at net.minecraftforge.client.model.ModelLoader$VariantLoader.loadModel(ModelLoader.java:1189) ~[ModelLoader$VariantLoader.class:?]
 	at net.minecraftforge.client.model.ModelLoaderRegistry.getModel(ModelLoaderRegistry.java:149) ~[ModelLoaderRegistry.class:?]
 	... 21 more
-[00:37:51] [main/ERROR] [FML/]: Exception loading blockstate for the variant blocksfm:radio#normal: 
+[00:37:51] [main/ERROR] [FML/]: Exception loading blockstate for the variant blocksfm:radio#normal:
 java.lang.Exception: Could not load model definition for variant blocksfm:radio
 	at net.minecraftforge.client.model.ModelLoader.getModelBlockDefinition(ModelLoader.java:281) ~[ModelLoader.class:?]
 	at net.minecraft.client.renderer.block.model.ModelBakery.loadBlock(ModelBakery.java:121) ~[ModelBakery.class:?]
@@ -667,7 +667,7 @@ Caused by: java.io.FileNotFoundException: blocksfm:blockstates/radio.json
 	at net.minecraft.client.renderer.block.model.ModelBakery.getModelBlockDefinition(ModelBakery.java:208) ~[ModelBakery.class:?]
 	at net.minecraftforge.client.model.ModelLoader.getModelBlockDefinition(ModelLoader.java:277) ~[ModelLoader.class:?]
 	... 20 more
-[00:37:51] [main/ERROR] [FML/]: Exception loading model for variant blocksfm:radio#inventory for item "blocksfm:radio", normal location exception: 
+[00:37:51] [main/ERROR] [FML/]: Exception loading model for variant blocksfm:radio#inventory for item "blocksfm:radio", normal location exception:
 net.minecraftforge.client.model.ModelLoaderRegistry$LoaderException: Exception loading model blocksfm:item/radio with loader VanillaLoader.INSTANCE, skipping
 	at net.minecraftforge.client.model.ModelLoaderRegistry.getModel(ModelLoaderRegistry.java:153) ~[ModelLoaderRegistry.class:?]
 	at net.minecraftforge.client.model.ModelLoader.loadItemModels(ModelLoader.java:314) ~[ModelLoader.class:?]
@@ -697,7 +697,7 @@ Caused by: java.io.FileNotFoundException: blocksfm:models/item/radio.json
 	at net.minecraftforge.client.model.ModelLoader$VanillaLoader.loadModel(ModelLoader.java:880) ~[ModelLoader$VanillaLoader.class:?]
 	at net.minecraftforge.client.model.ModelLoaderRegistry.getModel(ModelLoaderRegistry.java:149) ~[ModelLoaderRegistry.class:?]
 	... 20 more
-[00:37:51] [main/ERROR] [FML/]: Exception loading model for variant blocksfm:radio#inventory for item "blocksfm:radio", blockstate location exception: 
+[00:37:51] [main/ERROR] [FML/]: Exception loading model for variant blocksfm:radio#inventory for item "blocksfm:radio", blockstate location exception:
 net.minecraftforge.client.model.ModelLoaderRegistry$LoaderException: Exception loading model blocksfm:radio#inventory with loader VariantLoader.INSTANCE, skipping
 	at net.minecraftforge.client.model.ModelLoaderRegistry.getModel(ModelLoaderRegistry.java:153) ~[ModelLoaderRegistry.class:?]
 	at net.minecraftforge.client.model.ModelLoader.loadItemModels(ModelLoader.java:322) ~[ModelLoader.class:?]
@@ -848,3 +848,4 @@ Caused by: net.minecraft.client.renderer.block.model.ModelBlockDefinition$Missin
 [00:37:52] [main/DEBUG] [FML/]: Bar Finished: Loading took 15.404s
 [00:37:53] [main/DEBUG] [FML/]: Bar Finished: Loading Resource - CloudRenderer took 0.006s
 [00:38:02] [main/DEBUG] [FML/]: Overriding dimension: using 0
+bla
