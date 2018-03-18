@@ -5,8 +5,10 @@ import java.util.ArrayList;
 import com.blocksfm.blocks.BlockTileEntity;
 import com.blocksfm.blocks.radiostation.BlockRadioStation;
 import com.blocksfm.blocks.radiostation.TileEntityRadioStation;
+import com.blocksfm.main.BlocksFM;
 import com.blocksfm.utils.Utils;
 
+import gui.GuiTypes;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
@@ -67,6 +69,7 @@ public class BlockRadio extends BlockTileEntity<TileEntityRadio>
 	@Override
 	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
     {
+		playerIn.openGui(BlocksFM.instance, GuiTypes.RADIO.ordinal(), worldIn, pos.getX(), pos.getY(), pos.getY());
 		if(!worldIn.isRemote)
 		{
 			updateRadios(worldIn);

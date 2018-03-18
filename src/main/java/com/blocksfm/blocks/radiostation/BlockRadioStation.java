@@ -28,7 +28,6 @@ public class BlockRadioStation extends BlockTileEntity<TileEntityRadioStation>
 	public BlockRadioStation()
 	{
 		super(Material.ROCK, "radiostation");
-
 	}
 
 	@Override
@@ -110,7 +109,4 @@ public class BlockRadioStation extends BlockTileEntity<TileEntityRadioStation>
 	public void setName(String name) {
 		this.name = name;
 	}
-
-
-
 }

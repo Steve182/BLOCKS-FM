@@ -4,6 +4,7 @@ import com.blocksfm.blocks.ModBlocks;
 import com.blocksfm.item.ModItems;
 import com.blocksfm.proxy.CommonProxy;
 
+import gui.GuiHandler;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
@@ -14,6 +15,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 
 @Mod(modid = BlocksFM.MODID, name = BlocksFM.NAME, version = BlocksFM.VERSION)
 public class BlocksFM
@@ -28,6 +30,8 @@ public class BlocksFM
     //Proxy
     @SidedProxy(serverSide = "com.blocksfm.proxy.CommonProxy", clientSide = "com.blocksfm.proxy.ClientProxy")
     public static CommonProxy proxy;
+
+    public static GuiHandler guiHndler = new GuiHandler();
 
     //for Item and Block registration
     @Mod.EventBusSubscriber
@@ -62,7 +66,7 @@ public class BlocksFM
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
-
+    	NetworkRegistry.INSTANCE.registerGuiHandler(BlocksFM.instance, guiHndler);
     }
 
     @EventHandler
