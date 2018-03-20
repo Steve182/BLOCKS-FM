@@ -3,15 +3,11 @@ package com.blocksfm.blocks.radio;
 import java.util.ArrayList;
 
 import com.blocksfm.blocks.BlockTileEntity;
-import com.blocksfm.blocks.radiostation.BlockRadioStation;
-import com.blocksfm.blocks.radiostation.TileEntityRadioStation;
 import com.blocksfm.main.BlocksFM;
-import com.blocksfm.utils.Utils;
 
 import gui.GuiTypes;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.EnumFacing;
@@ -36,65 +32,26 @@ public class BlockRadio extends BlockTileEntity<TileEntityRadio>
 		return this;
 	}
 
-	public static void updateRadios(World world)
-	{
-		if(!world.isRemote)
-		{
-			synchronized (allRadios)
-			{
-				synchronized (BlockRadioStation.getStations())
-				{
-					//alle radios durchgehen
-					for(TileEntityRadio r : BlockRadio.allRadios)
-					{
-						r.getRecievedStations().clear();
-
-						//alle platzierten RadioStations durchgehen
-						for(TileEntityRadioStation rs : BlockRadioStation.getStations())
-						{
-							//Utils.chat(Utils.calcDistance(rs.getPos(), r.getPos()) + "");
-							//wenn Distanz zwischen Radio und Station <= maximale Sendedistanz der Station, kann Station empfangen werden
-							if(Utils.calcDistance(rs.getPos(), r.getPos()) <= rs.getSendingDistance() && !r.getRecievedStations().contains(rs))
-							{
-								r.getRecievedStations().add(rs);
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-
-
 	@Override
 	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
     {
-		playerIn.openGui(BlocksFM.instance, GuiTypes.RADIO.ordinal(), worldIn, pos.getX(), pos.getY(), pos.getY());
-		if(!worldIn.isRemote)
-		{
-			updateRadios(worldIn);
-			Minecraft.getMinecraft().player.sendChatMessage(this.getTileEntity(worldIn, pos).getRecievedStations().size() + "");
-		}
-		/*if(this.recievedStations.isEmpty())
-			Minecraft.getMinecraft().player.sendChatMessage("no stations in reach");
-		else
-			for(RadioStation rs : this.recievedStations)
-				Minecraft.getMinecraft().player.sendChatMessage(rs.getName());*/
+		//TileEntityRadio te = this.getTileEntity(worldIn, pos);
 
-		//for(TileEntityRadio r : allRadios)
-			//Utils.chat(r.getPos() + "");
+		playerIn.openGui(BlocksFM.instance, GuiTypes.RADIO.ordinal(), worldIn, pos.getX(), pos.getY(), pos.getZ());
+
 		return true;
     }
 
 	@Override
 	public void breakBlock(World worldIn, BlockPos pos, IBlockState state)
 	{
-		synchronized (BlockRadio.allRadios)
-		{
-			allRadios.remove(this.getTileEntity(worldIn, pos));
-			Minecraft.getMinecraft().player.sendChatMessage("amount of stations in game: " + allRadios.size());
-		}
 	}
+
+	 @Override
+	 public boolean hasTileEntity(IBlockState state)
+	 {
+		 return true;
+	 }
 
 
 	@Override
@@ -108,24 +65,8 @@ public class BlockRadio extends BlockTileEntity<TileEntityRadio>
 	{
 		TileEntityRadio r = new TileEntityRadio();
 
-		if(!world.isRemote)
-		{
-			synchronized (allRadios)
-			{
-				//neue Station registrieren
-				if(!allRadios.contains(r))
-					allRadios.add(r);
-
-				Utils.chat("Radio: " + r.getPos());
-				Minecraft.getMinecraft().player.sendChatMessage("amount of radios in game: " + allRadios.size());
-			}
-		}
-
-		updateRadios(world);
-
 		return r;
 	}
-
 
 	//getter/setter
 	public static ArrayList<TileEntityRadio> getAllRadios() {

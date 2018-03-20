@@ -1,15 +1,10 @@
 package com.blocksfm.blocks.radiostation;
 
-import java.io.File;
-import java.util.ArrayList;
-
 import com.blocksfm.blocks.BlockTileEntity;
-import com.blocksfm.blocks.radio.BlockRadio;
-import com.blocksfm.utils.Utils;
+import com.blocksfm.main.BlocksFM;
 
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.EnumFacing;
@@ -19,11 +14,7 @@ import net.minecraft.world.World;
 
 public class BlockRadioStation extends BlockTileEntity<TileEntityRadioStation>
 {
-
-	private static ArrayList<TileEntityRadioStation> allStations = new ArrayList<>();
-
-
-	private File audioFile = new File("C:/Users/Stefan/Desktop/test.mp3");
+	private static TileEntityRadioStation[] registeredStations = new TileEntityRadioStation[BlocksFM.maxFreq - BlocksFM.minFreq];
 
 	public BlockRadioStation()
 	{
@@ -39,42 +30,19 @@ public class BlockRadioStation extends BlockTileEntity<TileEntityRadioStation>
 	@Override
 	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
     {
-		//AudioPlayer.play(audioFile);
-		return false;
+		return true;
     }
 
 	@Override
 	public void breakBlock(World worldIn, BlockPos pos, IBlockState state)
 	{
-		synchronized (BlockRadioStation.allStations)
-		{
-			allStations.remove(this.getTileEntity(worldIn, pos));
-			Minecraft.getMinecraft().player.sendChatMessage("amount of stations in game: " + allStations.size());
 
-			BlockRadio.updateRadios(worldIn);
-		}
 	}
 
 	@Override
 	public TileEntityRadioStation createTileEntity(World world, IBlockState state)
 	{
 		TileEntityRadioStation rs = new TileEntityRadioStation();
-
-		if(!world.isRemote)
-		{
-			synchronized (allStations)
-			{
-				//neue Station registrieren
-				if(!allStations.contains(rs))
-					allStations.add(rs);
-
-				Utils.chat("Station: " + rs.getPos());
-				Minecraft.getMinecraft().player.sendChatMessage("amount of stations in game: " + allStations.size());
-			}
-		}
-
-		//radios benchrichtigen, dass evtl neue station in reichweite
-		//BlockRadio.updateRadios(world);
 
 		return rs;
 	}
@@ -86,22 +54,6 @@ public class BlockRadioStation extends BlockTileEntity<TileEntityRadioStation>
 	}
 
 	//getter/setter
-	public File getAudioFile() {
-		return audioFile;
-	}
-
-	public void setAudioFile(File audioFile) {
-		this.audioFile = audioFile;
-	}
-
-	public static ArrayList<TileEntityRadioStation> getStations() {
-		return allStations;
-	}
-
-	public static void setStations(ArrayList<TileEntityRadioStation> stations) {
-		BlockRadioStation.allStations = stations;
-	}
-
 	public String getName() {
 		return name;
 	}
@@ -109,4 +61,13 @@ public class BlockRadioStation extends BlockTileEntity<TileEntityRadioStation>
 	public void setName(String name) {
 		this.name = name;
 	}
+
+	public static TileEntityRadioStation[] getRegisteredStations() {
+		return registeredStations;
+	}
+
+	public static void setRegisteredStations(TileEntityRadioStation[] registeredStations) {
+		BlockRadioStation.registeredStations = registeredStations;
+	}
+
 }
