@@ -62,8 +62,8 @@ public class RadioGUI extends GuiScreen
         buttonGroupID++;
 
         //on - off
-        this.isOn = new GuiButton(buttonID++, this.width / 2, this.height / 4 + offset * buttonGroupID, this.te.formatOnOff());
-        this.isOn.setWidth(this.width - 200);
+        this.isOn = new GuiButton(buttonID++, this.width / 4, this.height / 4 + 2 *(offset * buttonGroupID), this.te.formatOnOff());
+        this.isOn.setWidth(this.width / 4);
         buttonGroupID++;
 
         this.buttonList.add(this.inVol);
@@ -111,6 +111,7 @@ public class RadioGUI extends GuiScreen
     public void updateScreen()
     {
     	this.labelList.clear();
+    	this.buttonList.remove(4);
     	this.buttonGroupID = 0;
     	this.labelID = 0;
 
@@ -123,21 +124,24 @@ public class RadioGUI extends GuiScreen
         this.buttonGroupID++;
 
         //buttonID = 4
-        this.isOn = new GuiButton(4, this.width / 2, this.height / 4 + offset * buttonGroupID, this.te.formatOnOff());
+        this.isOn = new GuiButton(4, this.width / 4, this.height / 4 + 2 * (offset * buttonGroupID), this.te.formatOnOff());
+        this.isOn.setWidth((this.width / 4) * 2);
 
         this.labelList.add(this.volLabel);
         this.labelList.add(this.freqLabel);
+        this.buttonList.add(this.isOn);
     }
 
     @Override
     protected void keyTyped(char typedChar, int keyCode) throws IOException {
         // Enter or ESC
-        if (keyCode == 1 /*|| keyCode == 28 || keyCode == 156*/) {
+        if (keyCode == 1) {
+        	{
+                this.mc.displayGuiScreen(null);
+                if (this.mc.currentScreen == null)
+                    this.mc.setIngameFocus();
+        	}
 
-
-            this.mc.displayGuiScreen(null);
-            if (this.mc.currentScreen == null)
-                this.mc.setIngameFocus();
         }
     }
 

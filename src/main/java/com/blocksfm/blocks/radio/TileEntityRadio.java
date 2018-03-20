@@ -29,6 +29,16 @@ public class TileEntityRadio extends TileEntity
 		return super.writeToNBT(comp);
 	}
 
+	@Override
+	public void readFromNBT(NBTTagCompound comp)
+	{
+		this.isOn = comp.getBoolean("isOn");
+		this.playedFreq = comp.getInteger("playedFreq");
+		this.volume = comp.getInteger("volume");
+
+		super.readFromNBT(comp);
+	}
+
 	public void increaseVolume()
 	{
 		this.volume++;
