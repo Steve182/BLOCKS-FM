@@ -2,6 +2,7 @@ package com.blocksfm.blocks.radio;
 
 import java.util.ArrayList;
 
+import com.blocksfm.audio.AudioPlaybackThread;
 import com.blocksfm.blocks.BlockTileEntity;
 import com.blocksfm.blocks.radiostation.BlockRadioStation;
 import com.blocksfm.blocks.radiostation.TileEntityRadioStation;
@@ -67,19 +68,10 @@ public class BlockRadio extends BlockTileEntity<TileEntityRadio>
 	@Override
 	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
     {
-		if(!worldIn.isRemote)
-		{
-			updateRadios(worldIn);
-			Minecraft.getMinecraft().player.sendChatMessage(this.getTileEntity(worldIn, pos).getRecievedStations().size() + "");
-		}
-		/*if(this.recievedStations.isEmpty())
-			Minecraft.getMinecraft().player.sendChatMessage("no stations in reach");
+		if(!AudioPlaybackThread.getInstance().isAlive())
+			AudioPlaybackThread.getInstance().start();
 		else
-			for(RadioStation rs : this.recievedStations)
-				Minecraft.getMinecraft().player.sendChatMessage(rs.getName());*/
-
-		//for(TileEntityRadio r : allRadios)
-			//Utils.chat(r.getPos() + "");
+			AudioPlaybackThread.getInstance().shutdown();
 		return true;
     }
 

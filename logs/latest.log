@@ -1,27 +1,29 @@
-[00:40:00] [main/INFO]: Setting user: Player94
-[00:40:04] [main/WARN]: Skipping bad option: lastServer:
-[00:40:04] [main/INFO]: LWJGL Version: 2.9.4
-[00:40:08] [main/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:BLOCKS-FM
-[00:40:11] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[00:40:12] [Thread-5/INFO]: Initializing LWJGL OpenAL
-[00:40:12] [Thread-5/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[00:40:12] [Thread-5/INFO]: OpenAL initialized.
-[00:40:12] [Sound Library Loader/INFO]: Sound engine started
-[00:40:17] [main/INFO]: Created: 512x512 textures-atlas
-[00:40:19] [main/WARN]: Skipping bad option: lastServer:
-[00:40:19] [main/INFO]: Narrator library for x64 successfully loaded
-[00:40:20] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: Invalid session id
-[00:40:23] [Server thread/INFO]: Starting integrated minecraft server version 1.12.2
-[00:40:23] [Server thread/INFO]: Generating keypair
-[00:40:24] [Server thread/INFO]: Loaded 488 advancements
-[00:40:24] [Server thread/INFO]: Preparing start region for level 0
-[00:40:25] [Server thread/INFO]: Preparing spawn area: 28%
-[00:40:26] [Server thread/INFO]: Changing view distance to 12, from 10
-[00:40:27] [Server thread/INFO]: Player94[local:E:49e4d129] logged in with entity id 384 at (176.24877358657724, 68.0, 51.7601292593679)
-[00:40:27] [Server thread/INFO]: Player94 joined the game
-[00:40:29] [Server thread/INFO]: Saving and pausing game...
-[00:40:29] [Server thread/INFO]: Saving chunks for level 'New World'/overworld
-[00:40:29] [pool-2-thread-1/WARN]: Couldn't look up profile properties for com.mojang.authlib.GameProfile@4c39e93[id=9a0ac3e8-2a19-3175-bbea-119d15dbea78,name=Player94,properties={},legacy=false]
+[19:15:25] [main/INFO]: Setting user: Player176
+[19:15:28] [main/WARN]: Skipping bad option: lastServer:
+[19:15:28] [main/INFO]: LWJGL Version: 2.9.4
+[19:15:30] [main/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:BLOCKS-FM, FMLFileResourcePack:NotEnoughCodecs
+[19:15:31] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[19:15:31] [Thread-4/INFO]: Initializing LWJGL OpenAL
+[19:15:31] [Thread-4/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[19:15:31] [Thread-4/INFO]: OpenAL initialized.
+[19:15:32] [Sound Library Loader/INFO]: Sound engine started
+[19:15:33] [main/INFO]: Created: 512x512 textures-atlas
+[19:15:34] [main/WARN]: Skipping bad option: lastServer:
+[19:15:35] [main/INFO]: Narrator library successfully loaded
+[19:15:36] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: Invalid session id
+[19:15:38] [Server thread/INFO]: Starting integrated minecraft server version 1.12.2
+[19:15:38] [Server thread/INFO]: Generating keypair
+[19:15:38] [Server thread/INFO]: Loaded 488 advancements
+[19:15:39] [Server thread/INFO]: Preparing start region for level 0
+[19:15:40] [Server thread/INFO]: Preparing spawn area: 78%
+[19:15:40] [Server thread/INFO]: Changing view distance to 12, from 10
+[19:15:41] [Server thread/INFO]: Player176[local:E:bba7fc93] logged in with entity id 385 at (169.35224572099216, 68.0, 53.576038830307574)
+[19:15:41] [Server thread/INFO]: Player176 joined the game
+[19:15:42] [Server thread/INFO]: Saving and pausing game...
+[19:15:42] [Server thread/INFO]: Saving chunks for level 'New World'/overworld
+[19:15:42] [Server thread/INFO]: Saving chunks for level 'New World'/the_nether
+[19:15:42] [Server thread/INFO]: Saving chunks for level 'New World'/the_end
+[19:15:42] [pool-2-thread-1/WARN]: Couldn't look up profile properties for com.mojang.authlib.GameProfile@37679775[id=6405522b-9fbb-33c3-a135-56650c3b4d76,name=Player176,properties={},legacy=false]
 com.mojang.authlib.exceptions.AuthenticationException: The client has sent too many requests within a certain amount of time
 	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:79) ~[YggdrasilAuthenticationService.class:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillGameProfile(YggdrasilMinecraftSessionService.java:180) [YggdrasilMinecraftSessionService.class:?]
@@ -38,68 +40,39 @@ com.mojang.authlib.exceptions.AuthenticationException: The client has sent too m
 	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillProfileProperties(YggdrasilMinecraftSessionService.java:170) [YggdrasilMinecraftSessionService.class:?]
 	at net.minecraft.client.Minecraft.getProfileProperties(Minecraft.java:3188) [Minecraft.class:?]
 	at net.minecraft.client.resources.SkinManager$3.run(SkinManager.java:138) [SkinManager$3.class:?]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) [?:1.8.0_161]
-	at java.util.concurrent.FutureTask.run(Unknown Source) [?:1.8.0_161]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:1.8.0_161]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:1.8.0_161]
-	at java.lang.Thread.run(Unknown Source) [?:1.8.0_161]
-[00:40:29] [Server thread/INFO]: Saving chunks for level 'New World'/the_nether
-[00:40:29] [Server thread/INFO]: Saving chunks for level 'New World'/the_end
-[00:40:36] [Server thread/INFO]: <Player94> Station: BlockPos{x=0, y=0, z=0}
-[00:40:36] [Server thread/INFO]: <Player94> amount of stations in game: 1
-[00:40:36] [main/INFO]: [CHAT] <Player94> Station: BlockPos{x=0, y=0, z=0}
-[00:40:36] [main/INFO]: [CHAT] <Player94> amount of stations in game: 1
-[00:40:38] [Server thread/INFO]: <Player94> Radio: BlockPos{x=0, y=0, z=0}
-[00:40:38] [Server thread/INFO]: <Player94> amount of radios in game: 1
-[00:40:38] [main/INFO]: [CHAT] <Player94> Radio: BlockPos{x=0, y=0, z=0}
-[00:40:38] [main/INFO]: [CHAT] <Player94> amount of radios in game: 1
-[00:40:39] [Server thread/INFO]: <Player94> 1
-[00:40:39] [main/INFO]: [CHAT] <Player94> 1
-[00:40:41] [Server thread/INFO]: <Player94> amount of stations in game: 0
-[00:40:41] [main/INFO]: [CHAT] <Player94> amount of stations in game: 0
-[00:40:42] [Server thread/INFO]: <Player94> amount of stations in game: 0
-[00:40:42] [main/INFO]: [CHAT] <Player94> amount of stations in game: 0
-[00:40:43] [Server thread/INFO]: <Player94> Radio: BlockPos{x=0, y=0, z=0}
-[00:40:43] [Server thread/INFO]: <Player94> amount of radios in game: 1
-[00:40:43] [main/INFO]: [CHAT] <Player94> Radio: BlockPos{x=0, y=0, z=0}
-[00:40:43] [main/INFO]: [CHAT] <Player94> amount of radios in game: 1
-[00:40:45] [Server thread/INFO]: <Player94> Station: BlockPos{x=0, y=0, z=0}
-[00:40:45] [Server thread/INFO]: <Player94> amount of stations in game: 1
-[00:40:45] [main/INFO]: [CHAT] <Player94> Station: BlockPos{x=0, y=0, z=0}
-[00:40:45] [main/INFO]: [CHAT] <Player94> amount of stations in game: 1
-[00:40:46] [Server thread/INFO]: <Player94> 1
-[00:40:46] [main/INFO]: [CHAT] <Player94> 1
-[00:40:52] [Server thread/INFO]: <Player94> Radio: BlockPos{x=0, y=0, z=0}
-[00:40:52] [Server thread/INFO]: <Player94> amount of radios in game: 2
-[00:40:52] [main/INFO]: [CHAT] <Player94> Radio: BlockPos{x=0, y=0, z=0}
-[00:40:52] [main/INFO]: [CHAT] <Player94> amount of radios in game: 2
-[00:40:54] [Server thread/INFO]: <Player94> amount of stations in game: 1
-[00:40:54] [main/INFO]: [CHAT] <Player94> amount of stations in game: 1
-[00:40:55] [Server thread/INFO]: <Player94> Station: BlockPos{x=0, y=0, z=0}
-[00:40:55] [Server thread/INFO]: <Player94> amount of stations in game: 2
-[00:40:55] [main/INFO]: [CHAT] <Player94> Station: BlockPos{x=0, y=0, z=0}
-[00:40:55] [main/INFO]: [CHAT] <Player94> amount of stations in game: 2
-[00:41:02] [Server thread/INFO]: <Player94> 1
-[00:41:02] [main/INFO]: [CHAT] <Player94> 1
-[00:41:07] [Server thread/INFO]: <Player94> amount of stations in game: 1
-[00:41:07] [main/INFO]: [CHAT] <Player94> amount of stations in game: 1
-[00:41:09] [Server thread/INFO]: <Player94> amount of stations in game: 0
-[00:41:10] [main/INFO]: [CHAT] <Player94> amount of stations in game: 0
-[00:41:10] [Server thread/INFO]: <Player94> amount of stations in game: 0
-[00:41:10] [main/INFO]: [CHAT] <Player94> amount of stations in game: 0
-[00:41:11] [Server thread/INFO]: Saving and pausing game...
-[00:41:11] [Server thread/INFO]: Saving chunks for level 'New World'/overworld
-[00:41:11] [Server thread/INFO]: Saving chunks for level 'New World'/the_nether
-[00:41:11] [Server thread/INFO]: Saving chunks for level 'New World'/the_end
-[00:41:11] [Server thread/INFO]: Stopping server
-[00:41:11] [Server thread/INFO]: Saving players
-[00:41:11] [Server thread/INFO]: Player94 lost connection: Disconnected
-[00:41:11] [Server thread/INFO]: Player94 left the game
-[00:41:11] [Server thread/INFO]: Stopping singleplayer server as player logged out
-[00:41:11] [Server thread/INFO]: Saving worlds
-[00:41:11] [Server thread/INFO]: Saving chunks for level 'New World'/overworld
-[00:41:12] [Server thread/INFO]: Saving chunks for level 'New World'/the_nether
-[00:41:12] [Server thread/INFO]: Saving chunks for level 'New World'/the_end
-[00:41:13] [main/INFO]: Stopping!
-[00:41:13] [main/INFO]: SoundSystem shutting down...
-[00:41:13] [main/WARN]: Author: Paul Lamb, www.paulscode.com
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [?:1.8.0_162]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [?:1.8.0_162]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_162]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_162]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_162]
+[19:15:54] [Server thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.IllegalThreadStateException
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122) ~[?:1.8.0_162]
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192) ~[?:1.8.0_162]
+	at net.minecraft.util.Util.runTask(Util.java:54) [Util.class:?]
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:796) [MinecraftServer.class:?]
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:741) [MinecraftServer.class:?]
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:192) [IntegratedServer.class:?]
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:590) [MinecraftServer.class:?]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_162]
+Caused by: java.lang.IllegalThreadStateException
+	at java.lang.Thread.start(Thread.java:708) ~[?:1.8.0_162]
+	at com.blocksfm.blocks.radio.BlockRadio.onBlockActivated(BlockRadio.java:72) ~[BlockRadio.class:?]
+	at net.minecraft.server.management.PlayerInteractionManager.processRightClickBlock(PlayerInteractionManager.java:472) ~[PlayerInteractionManager.class:?]
+	at net.minecraft.network.NetHandlerPlayServer.processTryUseItemOnBlock(NetHandlerPlayServer.java:767) ~[NetHandlerPlayServer.class:?]
+	at net.minecraft.network.play.client.CPacketPlayerTryUseItemOnBlock.processPacket(CPacketPlayerTryUseItemOnBlock.java:68) ~[CPacketPlayerTryUseItemOnBlock.class:?]
+	at net.minecraft.network.play.client.CPacketPlayerTryUseItemOnBlock.processPacket(CPacketPlayerTryUseItemOnBlock.java:13) ~[CPacketPlayerTryUseItemOnBlock.class:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:21) ~[PacketThreadUtil$1.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[?:1.8.0_162]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[?:1.8.0_162]
+	at net.minecraft.util.Util.runTask(Util.java:53) ~[Util.class:?]
+	... 5 more
+[19:16:21] [main/INFO]: Stopping!
+[19:16:22] [Server thread/INFO]: Stopping server
+[19:16:22] [Server thread/INFO]: Saving players
+[19:16:22] [Server thread/INFO]: Saving worlds
+[19:16:22] [Server thread/INFO]: Saving chunks for level 'New World'/overworld
+[19:16:22] [Server thread/INFO]: Saving chunks for level 'New World'/the_nether
+[19:16:22] [Server thread/INFO]: Saving chunks for level 'New World'/the_end
+[19:16:22] [main/INFO]: SoundSystem shutting down...
+[19:16:22] [main/WARN]: Author: Paul Lamb, www.paulscode.com

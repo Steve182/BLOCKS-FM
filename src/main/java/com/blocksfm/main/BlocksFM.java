@@ -14,6 +14,8 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
+import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 
 @Mod(modid = BlocksFM.MODID, name = BlocksFM.NAME, version = BlocksFM.VERSION)
 public class BlocksFM
@@ -28,6 +30,9 @@ public class BlocksFM
     //Proxy
     @SidedProxy(serverSide = "com.blocksfm.proxy.CommonProxy", clientSide = "com.blocksfm.proxy.ClientProxy")
     public static CommonProxy proxy;
+    
+    //Network
+    public static final SimpleNetworkWrapper INSTANCE = NetworkRegistry.INSTANCE.newSimpleChannel(BlocksFM.MODID);
 
     //for Item and Block registration
     @Mod.EventBusSubscriber
@@ -56,7 +61,6 @@ public class BlocksFM
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-
     }
 
     @EventHandler
